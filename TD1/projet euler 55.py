@@ -18,7 +18,7 @@ def test_lynchrell(n) :
     m=n
     test = True
     compteur = 0
-    while compteur < 50 and test == True :
+    while compteur < 50 and test :
         if m + reverse(m) == reverse (m + reverse(m)): #si le nombre obtenu est un palyndrome alors n est un lynchrell
             test = False
         compteur += 1
@@ -29,7 +29,7 @@ def solve(n) :
     "renvoie le nombre d'entiers inférieurs à n qui sont des  nombres de lynchrell"
     N = 0
     for i in range(n) :
-        if test_lynchrell(i) == True:
+        if test_lynchrell(i):
              N += 1
     return N
     
